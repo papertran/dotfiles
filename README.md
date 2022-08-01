@@ -20,3 +20,11 @@ curl -fLo "DejaVuSansMono Nerd Font Bold.ttf" https://github.com/ryanoasis/nerd-
 curl -fLo "DejaVuSansMono Nerd Font Italic.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DejaVuSansMono/Italic/complete/DejaVu%20Sans%20Mono%20Oblique%20Nerd%20Font%20Complete.ttf
 curl -fLo "DejaVuSansMono Nerd Font Bold Italic.ttf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DejaVuSansMono/Bold-Italic/complete/DejaVu%20Sans%20Mono%20Bold%20Oblique%20Nerd%20Font%20Complete%20Mono.ttf
 ```
+
+Mac copy config folders
+
+```bash
+rsync -a --delete kitty/.config/kitty/ ~/.config/kitty/
+
+rsync -a --delete nvim/.config/nvim/ ~/.config/nvim/
+```
