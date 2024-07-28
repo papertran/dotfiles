@@ -9,7 +9,7 @@ local opt = vim.opt
 opt.ignorecase = true
 
 -- scrolling
-opt.number = false
+opt.number = true
 opt.relativenumber = false
 opt.scrolloff = 8
 
