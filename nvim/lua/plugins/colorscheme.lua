@@ -1,5 +1,5 @@
 return {
-    -- add gruvbox
-    {"wittyjudge/gruvbox-material.nvim"}, -- Configure LazyVim to load gruvbox
-    {"LazyVim/LazyVim", opts = {colorscheme = "gruvbox-material"}}
+  -- add gruvbox
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "LazyVim/LazyVim", opts = { colorscheme = "catppuccin" } },
 }
