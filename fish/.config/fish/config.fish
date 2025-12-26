@@ -23,6 +23,8 @@ alias gc="git commit"
 alias gp="git push"
 alias gl="git pull"
 alias gd="git diff"
+alias lg="lazygit"
+
 
 # Directory navigation
 alias ..="cd .."

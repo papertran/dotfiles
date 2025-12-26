@@ -1,0 +1,35 @@
+# Font
+font-family = FiraCode Nerd Font
+font-size = 14
+font-feature = -calt
+font-feature = +ss01
+font-feature = +ss02
+font-feature = +ss03
+font-feature = +ss05
+
+# Theme - Reference Catppuccin Mocha
+theme = catppuccin-mocha
+
+# Window
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+window-decoration = true
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+
+# Shell
+command = /opt/homebrew/bin/fish
+
+# Behavior
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+
+# Performance
+sync-to-monitor = true
+
+# Mouse
+mouse-hide-while-typing = true
