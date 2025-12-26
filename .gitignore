@@ -1,0 +1,115 @@
+i# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Fish shell
+fish/.config/fish/fish_variables
+fish/.config/fish/fishd.*
+fish/.config/fish/conf.d/private.fish
+
+# Neovim
+nvim/.config/nvim/plugin/
+nvim/.config/nvim/.netrwhist
+nvim/.config/nvim/undo/
+nvim/.config/nvim/swap/
+nvim/.config/nvim/backup/
+nvim/.config/nvim/sessions/
+nvim/.config/nvim/.lazy-lock.json
+nvim/.config/nvim/lazy-lock.json
+
+# VS Code / Cursor - Personal data
+**/globalStorage/
+**/workspaceStorage/
+**/User/globalStorage/
+**/User/workspaceStorage/
+**/User/History/
+**/User/snippets/*.code-snippets
+**/.vscode/
+*.vsix
+
+# Raycast - Contains personal data, searches, tokens
+raycast/Library/Application Support/Raycast/*
+!raycast/Library/Application Support/Raycast/scripts/
+raycast/Library/Application Support/Raycast/scripts/**/*.log
+
+# Karabiner - Machine-specific
+karabiner/.config/karabiner/automatic_backups/
+
+# Git - Sensitive info
+git/.config/git/config.local
+git/.config/git/credentials
+
+# SSH - Never commit!
+**/.ssh/
+ssh/
+
+# GPG
+**/.gnupg/
+gpg/
+
+# 1Password - Never commit!
+**/1Password/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# History files
+*_history
+.bash_history
+.zsh_history
+.python_history
+.node_repl_history
+
+# Local config overrides
+*.local
+local/
+
+# Backup files
+*.backup
+*.bak
+*.swp
+*.swo
+*~
+\#*\#
+
+# Logs
+*.log
+logs/
+
+# Personal notes
+NOTES.md
+TODO.md
+private/
+
+# Compiled files
+*.pyc
+*.pyo
+*.so
+*.dylib
+
+# Config backup directory
+.config-backup
