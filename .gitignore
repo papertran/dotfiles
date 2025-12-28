@@ -45,6 +45,19 @@ nvim/.config/nvim/lazy-lock.json
 raycast/Library/Application Support/Raycast/*
 !raycast/Library/Application Support/Raycast/scripts/
 raycast/Library/Application Support/Raycast/scripts/**/*.log
+# Raycast - Exclude sensitive data
+raycast/Library/Application Support/Raycast/Cache/
+raycast/Library/Application Support/Raycast/Logs/
+raycast/Library/Application Support/Raycast/*.db
+raycast/Library/Application Support/Raycast/*.db-*
+raycast/Library/Application Support/Raycast/store.json
+raycast/Library/Application Support/Raycast/tokens.json
+
+# Keep these
+!raycast/Library/Application Support/Raycast/Scripts/
+!raycast/Library/Application Support/Raycast/Snippets/
+!raycast/Library/Application Support/Raycast/Extensions/
+!raycast/Library/Application Support/Raycast/*.json
 
 # Karabiner - Machine-specific
 karabiner/.config/karabiner/automatic_backups/

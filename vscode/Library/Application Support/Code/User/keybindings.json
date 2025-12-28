@@ -1,0 +1,52 @@
+[
+  // --- WINDOW NAVIGATION ---
+  { "key": "ctrl+h", "command": "workbench.action.navigateLeft", "when": "neovim.mode != insert" },
+  { "key": "ctrl+l", "command": "workbench.action.navigateRight", "when": "neovim.mode != insert" },
+  { "key": "ctrl+k", "command": "workbench.action.navigateUp", "when": "neovim.mode != insert" },
+  { "key": "ctrl+j", "command": "workbench.action.navigateDown", "when": "neovim.mode != insert" },
+  { "key": "ctrl+`", "command": "workbench.action.terminal.toggleTerminal", "when": "neovim.mode != insert" },
+
+  // --- SPLITS ---
+  { "key": "space w v", "command": "workbench.action.splitEditor", "when": "neovim.mode != insert" },
+  { "key": "space w s", "command": "workbench.action.splitEditorDown", "when": "neovim.mode != insert" },
+  { "key": "space w q", "command": "workbench.action.closeActiveEditor", "when": "neovim.mode != insert" },
+
+  // --- FILES & PROJECTS ---
+  { "key": "space f f", "command": "workbench.action.quickOpen", "when": "neovim.mode != insert" },
+  { "key": "space f g", "command": "workbench.action.findInFiles", "when": "neovim.mode != insert" },
+  { "key": "space e",   "command": "workbench.action.toggleSidebarVisibility", "when": "neovim.mode != insert" },
+  { "key": "space p s", "command": "workbench.action.openRecent", "when": "neovim.mode != insert" },
+
+  // --- EDITING & REFACTORING ---
+  { "key": "space =", "command": "editor.action.formatDocument", "when": "editorTextFocus && neovim.mode != insert" },
+  { "key": "g r",     "command": "editor.action.rename", "when": "editorTextFocus && neovim.mode != insert" },
+  { "key": "g d",     "command": "editor.action.revealDefinition", "when": "editorTextFocus && neovim.mode != insert" },
+  { "key": "g shift+d","command": "editor.action.peekDefinition", "when": "editorTextFocus && neovim.mode != insert" },
+
+  // --- FOLDING ---
+  { "key": "z o", "command": "editor.unfold", "when": "editorTextFocus && neovim.mode != insert" },
+  { "key": "z c", "command": "editor.fold", "when": "editorTextFocus && neovim.mode != insert" },
+  { "key": "z M", "command": "editor.foldAll", "when": "editorTextFocus && neovim.mode != insert" },
+  { "key": "z R", "command": "editor.unfoldAll", "when": "editorTextFocus && neovim.mode != insert" },
+
+  // --- MULTIPLE CURSORS ---
+  { "key": "g b", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorTextFocus && neovim.mode != insert" },
+
+  // --- LAZYGIT ---
+  { "key": "space g g", "command": "workbench.action.tasks.runTask", "args": "Lazygit", "when": "neovim.mode != insert" },
+
+  // --- AI / CURSOR ---
+  { "key": "space a k", "command": "aichat.trigger", "when": "neovim.mode != insert" }, // Cmd+K equivalent
+  { "key": "space a c", "command": "aichat.newchat", "when": "neovim.mode != insert" },
+  { "key": "space a e", "command": "aichat.insertselectionintochat", "when": "editorHasSelection && neovim.mode != insert" },
+
+  // --- DEBUGGING (F-Keys) ---
+  { "key": "f5", "command": "workbench.action.debug.start", "when": "neovim.mode != insert && !inDebugMode" },
+  { "key": "f5", "command": "workbench.action.debug.continue", "when": "neovim.mode != insert && inDebugMode" },
+  { "key": "shift+f5", "command": "workbench.action.debug.stop", "when": "neovim.mode != insert && inDebugMode" },
+  { "key": "ctrl+f5", "command": "workbench.action.debug.restart", "when": "neovim.mode != insert && inDebugMode" },
+  { "key": "f9", "command": "editor.debug.action.toggleBreakpoint", "when": "neovim.mode != insert" },
+  { "key": "f10", "command": "workbench.action.debug.stepOver", "when": "neovim.mode != insert && inDebugMode" },
+  { "key": "f11", "command": "workbench.action.debug.stepInto", "when": "neovim.mode != insert && inDebugMode" },
+  { "key": "shift+f11", "command": "workbench.action.debug.stepOut", "when": "neovim.mode != insert && inDebugMode" }
+]

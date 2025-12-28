@@ -1,3 +1,191 @@
 {
-    "explorer.confirmDelete": false
+  "explorer.confirmDelete": false,
+  // Theme and icons
+  "workbench.colorTheme": "Catppuccin Mocha",
+
+  // Window/UI scale
+  "window.zoomLevel": 0, // 0 = native scale; adjust if text feels too small/large
+
+  // Editor font
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', Menlo, Monaco, Consolas, 'Courier New', monospace", // Prefer Nerd Font (icons) and Fira Code (ligatures)
+  "editor.fontLigatures": false, // Enable programming ligatures
+  "editor.fontSize": 14, // Comfortable default size
+  "editor.lineHeight": 1.45, // Slightly taller lines for readability
+  "editor.letterSpacing": 0.2, // Tiny spacing tweak for crispness
+
+  // Rendering tweaks
+  "editor.renderWhitespace": "selection", // Show invisible chars only when selected
+  "editor.renderControlCharacters": false, // Hide control chars to reduce noise
+  "editor.minimap.enabled": false, // Remove minimap for a cleaner view
+  "editor.glyphMargin": false, // Hide gutter used by CodeLens/breakpoints if unused
+  "editor.overviewRulerBorder": false, // Remove border line of the overview ruler
+  "editor.scrollbar.vertical": "hidden", // Hide vertical scrollbar (use trackpad/keys)
+  "editor.scrollbar.horizontal": "hidden", // Hide horizontal scrollbar
+  "editor.stickyScroll.enabled": false, // Don’t pin top-of-file headings
+  "breadcrumbs.enabled": false, // Hide file path breadcrumbs
+
+  // Startup and general noise reduction
+  "workbench.startupEditor": "none", // Open to empty without welcome page
+  "workbench.tips.enabled": false, // Disable tips popup
+  "workbench.editor.enablePreview": true, // Reuse editor tab for quick peeks
+  "workbench.statusBar.visible": true, // Keep status bar visible (useful state)
+  "editor.hover.enabled": "on", // Allow hover info (docs/types)
+  "editor.inlineSuggest.enabled": true, // Inline completions when available
+  "problems.showCurrentInStatus": true, // Show current file errors in status bar
+
+  // Files and explorer behavior
+  "files.autoSave": "onFocusChange", // Save when switching away from editor
+  "files.trimTrailingWhitespace": true, // Remove trailing spaces on save
+  "files.insertFinalNewline": true, // Ensure newline at EOF (POSIX style)
+  "files.exclude": {
+    // Hide common clutter from Explorer
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.idea": true,
+    "**/.vscode": false, // Keep .vscode visible for workspace config
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  "search.exclude": {
+    // Speed up search by skipping heavy folders
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.git": true
+  },
+  "explorer.compactFolders": false, // Show full folder hierarchy (less collapsing)
+
+  // Indentation and formatting
+  "editor.tabSize": 2, // Default to two-space indent
+  "editor.insertSpaces": false, // Use spaces instead of tabs
+  "editor.detectIndentation": false, // Don’t auto-change per file (stay consistent)
+  "editor.formatOnSave": true, // Auto-format on save
+  "editor.formatOnPaste": true, // Format pasted code
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Use Prettier as default formatter
+
+  // Prettier configuration
+  "prettier.printWidth": 80, // Wrap lines at 80 columns
+  "prettier.singleQuote": true, // Prefer single quotes
+  "prettier.trailingComma": "all", // Trailing commas where valid ( cleaner diffs )
+  "prettier.semi": true, // Use semicolons
+  "prettier.arrowParens": "always", // Always include parens in arrow funcs
+
+  // Integrated terminal
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', Menlo, monospace", // Match editor font
+  "terminal.integrated.fontSize": 13, // Slightly smaller than editor for density
+  "terminal.integrated.enableImages": true, // Allow images in terminal (where supported)
+  "terminal.integrated.scrollback": 5000, // Keep more scrollback history
+
+  // Git/GitHub workflow
+  "git.confirmSync": false, // Don’t prompt when syncing
+  "git.autofetch": true, // Auto fetch remotes periodically
+  "git.enableSmartCommit": true, // Commit without staging when possible
+  "git.openRepositoryInParentFolders": "never", // Avoid auto-opening parent repos
+  "github.copilot.enable": {
+    // Copilot enablement per language
+    "*": true,
+    "markdown": true,
+    "plaintext": false
+  },
+
+  // JavaScript/TypeScript language features
+  "javascript.suggest.autoImports": true, // Suggest auto-imports
+  "typescript.suggest.autoImports": true, // Suggest auto-imports
+  "typescript.tsserver.experimental.enableProjectDiagnostics": false, // Reduce background diagnostics noise
+  "typescript.updateImportsOnFileMove.enabled": "always", // Keep imports updated on rename/move
+  "javascript.preferences.quoteStyle": "single", // Match Prettier quotes in JS
+  "typescript.preferences.quoteStyle": "single", // Match Prettier quotes in TS
+  "typescript.format.semicolons": "insert", // Match Prettier semicolons
+
+  // JSON / YAML settings
+  "json.format.keepLines": false, // Normalize JSON formatting
+
+  // Python (only used if Python extension installed)
+  "python.analysis.typeCheckingMode": "basic", // Lightweight type checks
+  "python.formatting.provider": "black", // Use Black formatter
+
+  // Editor behavior and ergonomics
+  "editor.wordWrap": "on", // Soft-wrap long lines
+  "editor.smoothScrolling": true, // Smooth scroll animation
+  "editor.quickSuggestions": {
+    // Inline suggestions behavior
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+  "editor.suggestSelection": "first", // Select first suggestion by default
+  "editor.suggest.snippetsPreventQuickSuggestions": false, // Keep suggestions even with snippets
+  "editor.snippetSuggestions": "inline", // Show snippets inline with suggestions
+  "editor.bracketPairColorization.enabled": true, // Colorize matching brackets
+  "editor.guides.bracketPairs": true, // Show bracket guides
+  "editor.linkedEditing": true, // Auto-update matching tags (HTML/XML)
+  "editor.suggest.showWords": false, // Reduce noisy word-based suggestions
+
+  // Tabs and window behavior
+  "workbench.editor.tabSizing": "shrink", // Shrink tabs to fit more
+  "workbench.editor.showTabs": "multiple", // Keep tabs visible
+  "workbench.editor.wrapTabs": true, // Wrap tabs to multiple rows when needed
+  "window.restoreWindows": "all", // Reopen previous windows on restart
+
+  // Telemetry and updates
+  "telemetry.telemetryLevel": "off", // Disable telemetry
+  "update.showReleaseNotes": false, // Don’t open release notes after update
+  "extensions.autoUpdate": true, // Keep extensions up to date
+  "extensions.autoCheckUpdates": true, // Check for updates automatically
+
+  // ESLint integration
+  "eslint.alwaysShowStatus": false, // Hide status bar item unless needed
+  "eslint.format.enable": true, // Let ESLint act as a formatter
+  "eslint.codeActionsOnSave.rules": null, // Use default code-actions rules
+  "editor.codeActionsOnSave": {
+    // Explicitly trigger fixers on save (manual if set to 'explicit')
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+
+  // Vim settings
+  // THE IMPORTANT BIT: Leader Key
+  "vim.leader": "<space>",
+  // Hand over control. We let Neovim handle most things,
+  // but we keep specific keys for VS Code functionality in keybindings.json
+  "vscode-neovim.ctrlKeysForInsertMode": [
+    "a",
+    "d",
+    "h",
+    "j",
+    "o",
+    "r",
+    "t",
+    "u",
+    "w"
+  ],
+  "vscode-neovim.ctrlKeysForNormalMode": [
+    "a",
+    "b",
+    "d",
+    "e",
+    "f",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "o",
+    "r",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "/"
+  ],
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
 }
