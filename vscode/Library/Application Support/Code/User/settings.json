@@ -78,6 +78,7 @@
   "terminal.integrated.fontSize": 13, // Slightly smaller than editor for density
   "terminal.integrated.enableImages": true, // Allow images in terminal (where supported)
   "terminal.integrated.scrollback": 5000, // Keep more scrollback history
+  "terminal.integrated.defaultLocation": "view",
 
   // Git/GitHub workflow
   "git.confirmSync": false, // Don’t prompt when syncing
