@@ -1,111 +1,83 @@
-## Cheat Sheet
+Since you are using **Neovim** inside VS Code, your `<Leader>` key is set to **Space**.
 
-### 🖥️ Interface (The Space Bar)
+### 📂 File & Project Management
 
-_These control VS Code windows, files, and tools._
+| Keybinding        | Action               | VS Code Command                            |
+| :---------------- | :------------------- | :----------------------------------------- |
+| **Space** `f` `f` | Quick Open Files     | `workbench.action.quickOpen`               |
+| **Space** `f` `g` | Global Search / Grep | `workbench.action.findInFiles`             |
+| **Space** `p` `s` | Open Recent Projects | `workbench.action.openRecent`              |
+| **Space** `e`     | Toggle File Explorer | `workbench.action.toggleSidebarVisibility` |
+| **Space** `=`     | Format Document      | `editor.action.formatDocument`             |
 
-| Command     | Shortcut         | Description                 |
-| :---------- | :--------------- | :-------------------------- |
-| **Files**   | `<Space> f f`    | Find File (Quick Open).     |
-|             | `<Space> f g`    | Grep (Search in all files). |
-|             | `<Space> e`      | Toggle File Explorer Tree.  |
-|             | `<Space> p s`    | Switch Project.             |
-| **Windows** | `<Space> w v`    | Split Vertical.             |
-|             | `<Space> w s`    | Split Horizontal.           |
-|             | `<Space> w q`    | Close current split.        |
-|             | `Ctrl + h/j/k/l` | Focus Left/Down/Up/Right.   |
-| **Tools**   | `<Space> g g`    | **Lazygit**.                |
-|             | `<Space> =`      | Format Document.            |
-|             | `Ctrl + \``      | Toggle Terminal.            |
+### 🪟 Window & Editor Management
 
-### 🐞 Debugging (The F-Keys)
+| Keybinding                       | Action                                | VS Code Command                                |
+| :------------------------------- | :------------------------------------ | :--------------------------------------------- |
+| **Ctrl** + `h` / `j` / `k` / `l` | **Navigate** Left / Down / Up / Right | `workbench.action.navigate...`                 |
+| **Space** `w` `v`                | Split Vertical                        | `workbench.action.splitEditor`                 |
+| **Space** `w` `s`                | Split Horizontal                      | `workbench.action.splitEditorDown`             |
+| **Space** `w` `q`                | Close Active Editor                   | `workbench.action.closeActiveEditor`           |
+| **Alt** + `↑` / `↓`              | Resize Height                         | `workbench.action.increase/decreaseViewHeight` |
+| **Alt** + `←` / `→`              | Resize Width                          | `workbench.action.increase/decreaseViewWidth`  |
 
-_Standard industry debug keys._
+### 🧠 Code Navigation & Refactoring
 
-| Key             | Action             |
-| :-------------- | :----------------- |
-| **F5**          | Start / Continue.  |
-| **Shift + F5**  | Stop.              |
-| **F9**          | Toggle Breakpoint. |
-| **F10**         | Step Over.         |
-| **F11**         | Step Into.         |
-| **Shift + F11** | Step Out.          |
+| Keybinding | Action                      | VS Code Command                             |
+| :--------- | :-------------------------- | :------------------------------------------ |
+| `g` `r`    | Rename Symbol               | `editor.action.rename`                      |
+| `g` `d`    | Go to Definition            | `editor.action.revealDefinition`            |
+| `g` `D`    | Peek Definition             | `editor.action.peekDefinition`              |
+| `g` `b`    | Add Selection to Next Match | `editor.action.addSelectionToNextFindMatch` |
+| `s`        | **Flash Jump**              | Jump to any character on screen             |
 
-### ⚡ Text & Navigation (Vim/LazyVim)
+### 🌲 Git Integration
 
-_These edit the code itself._
+| Keybinding        | Action           | Notes                                          |
+| :---------------- | :--------------- | :--------------------------------------------- |
+| **Space** `g` `g` | Open **Lazygit** | Runs the terminal task defined in `tasks.json` |
 
-| Context      | Shortcut  | Action                                    |
-| :----------- | :-------- | :---------------------------------------- |
-| **Jump**     | `s`       | **Flash Jump** (Jump anywhere on screen). |
-|              | `g d`     | Go to Definition.                         |
-|              | `g D`     | Peek Definition (Inline).                 |
-| **Refactor** | `g r`     | **Rename** Symbol (Safe Rename).          |
-|              | `g b`     | **Add Cursor** (Multi-cursor).            |
-| **Search**   | `/`       | Search within file (Vim style).           |
-|              | `n` / `N` | Next / Previous match.                    |
+### 💻 Terminal Control
 
-### 🔠 LazyVim Objects (The "Mini" Plugins)
+| Keybinding          | Action                  | Condition             |
+| :------------------ | :---------------------- | :-------------------- |
+| **Ctrl** + \`       | Toggle Terminal Panel   | Always active         |
+| **Alt** + `j`       | Focus Next Terminal     | When terminal focused |
+| **Alt** + `k`       | Focus Previous Terminal | When terminal focused |
+| **Alt** + `h` / `l` | Focus Split Panes       | When terminal focused |
+| **Alt** + `w`       | Kill (Close) Terminal   | When terminal focused |
 
-_Combine these with `c` (change), `d` (delete), `v` (visual)._
+### 🐞 Debugging
 
-| Object        | Key           | Example                                     |
-| :------------ | :------------ | :------------------------------------------ |
-| **Quotes**    | `i q` / `a q` | `ciq` (Change inside quotes).               |
-| **Brackets**  | `i b` / `a b` | `cib` (Change inside parenthesis/brackets). |
-| **Arguments** | `i a` / `a a` | `cia` (Change function argument).           |
-| **Surround**  | `sa`          | `saw"` (Surround word with `"`).            |
-|               | `sd`          | `sd"` (Delete surrounding `"`).             |
-|               | `sr`          | `sr'"` (Replace surrounding `'` with `"`).  |
+| Keybinding          | Action            |
+| :------------------ | :---------------- |
+| **F5**              | Start / Continue  |
+| **Shift** + **F5**  | Stop              |
+| **F9**              | Toggle Breakpoint |
+| **F10**             | Step Over         |
+| **F11**             | Step Into         |
+| **Shift** + **F11** | Step Out          |
 
 ---
 
-## 3. Helpful Patterns & Workflows
+### ⚡ Vim Plugin Reference (Implicit Bindings)
 
-### The "Mental Toggle"
+Since you installed `mini.surround` and `mini.ai`, you have these powerful implicit bindings available in Normal/Visual mode:
 
-- **Need a File or Tool?** -> Hit `Space`.
-- **Need to Debug?** -> Hit `F5`.
-- **Editing Code?** -> Stay in Vim mode.
+#### **Mini.Surround** (Prefix: `s`)
 
-### 1. The Fast Refactor
+- `s a` (Add): **Add** surround.
+  - _Ex:_ `saw"` (Surround Word with `"`) → turns `hello` into `"hello"`
+- `s d` (Delete): **Delete** surround.
+  - _Ex:_ `sd"` (Delete surrounding `"`) → turns `"hello"` into `hello`
+- `s r` (Replace): **Replace** surround.
+  - _Ex:_ `sr"(` (Replace `"` with `( )`) → turns `"hello"` into `( hello )`
 
-**Don't** backspace to rename a variable.
+#### **Mini.ai** (Better Text Objects)
 
-1.  Hover cursor over variable.
-2.  `g r` -> Type new name -> Enter.
-    _(This updates imports and references across all files)._
-
-### 2. The Multi-Edit
-
-**Don't** use `Cmd+D` spamming.
-
-1.  Cursor on word.
-2.  `g b` -> Adds cursor to next match.
-3.  `g b` -> Adds another.
-4.  `c` (Change) -> Type new text -> Esc.
-
-### 3. The "Lazy" Search & Replace
-
-**Don't** reach for the mouse to use the VS Code Find bar.
-
-1.  Type `:%s/Old/New/g` in Normal mode.
-2.  Hit Enter.
-    _(Replaces "Old" with "New" in the whole file instantly)._
-
-### 4. The Flash Navigation
-
-**Don't** hold down `j` or `k` to scroll to a line.
-
-1.  Look at where you want to go.
-2.  Press `s`.
-3.  Type the first letter of that word.
-4.  Type the label letter that appears.
-    _(Teleports cursor instantly)._
-
-### 5. Lazygit Quick-Fix
-
-1.  `<Space> g g` (Open Lazygit).
-2.  `Space` on file to Stage.
-3.  `c` to Commit.
-4.  `q` to Quit and return to code.
+- Extends `a` (around) and `i` (inside).
+- **TreeSitter Objects:** You can now use `a f` (function) or `i c` (class).
+  - _Ex:_ `vaf` (Visually select Around Function).
+  - _Ex:_ `daf` (Delete Around Function).
+- **Argument Objects:** `a a` (argument).
+  - _Ex:_ `cia` (Change Inside Argument) → useful inside `(param1, param2)`.

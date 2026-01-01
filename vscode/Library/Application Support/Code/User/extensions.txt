@@ -1,0 +1,9 @@
+asvetliakov.vscode-neovim
+bradlc.vscode-tailwindcss
+catppuccin.catppuccin-vsc
+dbaeumer.vscode-eslint
+esbenp.prettier-vscode
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
+ms-python.vscode-python-envs
