@@ -9,9 +9,10 @@
       "command": "lazygit",
       "presentation": {
         "reveal": "always",
-        "panel": "new", // Forces a new terminal instance
+        "panel": "dedicated",
         "focus": true,
-        "echo": false
+        "echo": false,
+        "clear": true
       },
       "problemMatcher": []
     }

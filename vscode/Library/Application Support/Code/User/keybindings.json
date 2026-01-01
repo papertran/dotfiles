@@ -25,6 +25,13 @@
     "command": "workbench.action.terminal.toggleTerminal",
     "when": "neovim.mode != insert"
   },
+  // --- LAZYGIT (Calls the task) ---
+  // {
+  //   "key": "space g g",
+  //   "command": "workbench.action.tasks.runTask",
+  //   "args": "Lazygit",
+  //   "when": "neovim.mode != insert"
+  // },
 
   // Keep Debugging (F-Keys) - Best handled by VS Code
   {
