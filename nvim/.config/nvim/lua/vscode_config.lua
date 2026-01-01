@@ -47,18 +47,20 @@ map("n", "<Space>wv", "workbench.action.splitEditor")
 map("n", "<Space>ws", "workbench.action.splitEditorDown")
 map("n", "<Space>wq", "workbench.action.closeActiveEditor")
 
+
 -- Force Ctrl+h/j/k/l to navigate VS Code windows
 map("n", "<C-h>", "workbench.action.navigateLeft")
 map("n", "<C-j>", "workbench.action.navigateDown")
 map("n", "<C-k>", "workbench.action.navigateUp")
 map("n", "<C-l>", "workbench.action.navigateRight")
 
--- -- LazyGit --
--- Manually map this one so we can pass the "Lazygit" argument
+-- --- LazyGit ---
+-- Run Lazygit and Maximize the Terminal Panel
 vim.keymap.set("n", "<Space>gg", function()
+    -- 1. Launch the Task
     vscode.call("workbench.action.tasks.runTask", { args = { "Lazygit" } })
+)
 end, { noremap = true, silent = true })
-
 
 -- --- AI / Cursor ---
 -- map("n", "<Space>ak", "aichat.trigger")

@@ -32,7 +32,7 @@ vim.opt.virtualedit = "block"
 -- ============================================================================
 
 -- Convert tabs to spaces. Standard for JS/TS/HTML.
-vim.opt.expandtab = true
+vim.opt.expandtab = false
 
 -- Number of spaces that a <Tab> in the file counts for.
 vim.opt.tabstop = 2
@@ -53,13 +53,25 @@ vim.opt.shiftround = true
 -- By default, 'w' stops at the hyphen. Uncomment the line below to make 'w' jump the whole string.
 -- vim.opt.iskeyword:append("-")
 
--- Speed up the time Neovim waits for a mapped sequence to complete.
--- Crucial for the <Space> leader key to feel snappy.
-vim.opt.timeoutlen = 300
 
 -- When doing Find & Replace, show a "Split" preview of what will change.
 -- (Note: In VS Code, this might be less visible, but it's great default behavior).
 vim.opt.inccommand = "split"
+
+-- ============================================================================
+-- CLIPBOARD FIXES
+-- ============================================================================
+
+-- "Paste over selection" normally deletes the selection into the register,
+-- causing you to lose your clipboard. This fixes that.
+-- Now, pressing 'p' in Visual mode will delete the selection to the
+-- "Black Hole" register ("_d) and then Paste (P).
+vim.keymap.set("x", "p", '"_dP', { noremap = true, silent = true })
+
+-- Optional: If you ACTUALLY want to cut the selected text while pasting,
+-- use Shift+P (P) instead.
+-- (This creates a nice separation: p = strict paste, P = swap text)
+
 
 -- ============================================================================
 -- VS CODE SPECIFIC LOADING
@@ -74,9 +86,5 @@ else
     -- These only run if you accidentally open 'nvim' in a terminal window.
     -- VS Code handles these features natively, so we don't enable them above.
     -- ========================================================================
-    vim.opt.number = true         -- Show line numbers
-    vim.opt.relativenumber = true -- Show relative line numbers
-    vim.opt.scrolloff = 8         -- Keep 8 lines of context when scrolling
-    vim.opt.wrap = false          -- No wrap by default
     vim.opt.termguicolors = true  -- Better colors
 end

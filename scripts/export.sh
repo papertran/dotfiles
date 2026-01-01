@@ -125,6 +125,32 @@ fi
 echo ""
 
 
+# VS Code Extensions
+if command -v code &> /dev/null; then
+    echo "📦 Exporting VS Code extensions..."
+    VSCODE_DOTFILES_DIR="$DOTFILES_DIR/vscode/Library/Application Support/Code/User"
+    mkdir -p "$VSCODE_DOTFILES_DIR"
+
+    code --list-extensions > "$VSCODE_DOTFILES_DIR/extensions.txt"
+    echo "✅ VS Code extensions exported ($(wc -l < "$VSCODE_DOTFILES_DIR/extensions.txt" | tr -d ' ') extensions)"
+else
+    echo "⚠️  VS Code CLI not found"
+fi
+echo ""
+
+# Cursor Extensions
+if command -v cursor &> /dev/null; then
+    echo "📦 Exporting Cursor extensions..."
+    CURSOR_DOTFILES_DIR="$DOTFILES_DIR/cursor/Library/Application Support/Cursor/User"
+    mkdir -p "$CURSOR_DOTFILES_DIR"
+
+    cursor --list-extensions > "$CURSOR_DOTFILES_DIR/extensions.txt"
+    echo "✅ Cursor extensions exported ($(wc -l < "$CURSOR_DOTFILES_DIR/extensions.txt" | tr -d ' ') extensions)"
+else
+    echo "⚠️  Cursor CLI not found"
+fi
+echo ""
+
 echo "======================================"
 echo "✅ Export complete!"
 echo "======================================"

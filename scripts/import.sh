@@ -126,6 +126,57 @@ fi
 echo ""
 
 
+# Install VS Code Extensions
+VSCODE_DOTFILES_DIR="$DOTFILES_DIR/vscode/Library/Application Support/Code/User"
+if [ -f "$VSCODE_DOTFILES_DIR/extensions.txt" ] && command -v code &> /dev/null; then
+    echo "📦 Installing VS Code extensions..."
+
+    extension_count=$(wc -l < "$VSCODE_DOTFILES_DIR/extensions.txt" | tr -d ' ')
+    echo "Found $extension_count extensions to install"
+
+    while IFS= read -r extension; do
+        if [ -n "$extension" ]; then
+            echo "  Installing: $extension"
+            code --install-extension "$extension" --force 2>/dev/null || echo "  ⚠️  Failed to install $extension"
+        fi
+    done < "$VSCODE_DOTFILES_DIR/extensions.txt"
+
+    echo "✅ VS Code extensions installed"
+else
+    if [ ! -f "$VSCODE_DOTFILES_DIR/extensions.txt" ]; then
+        echo "⚠️  No VS Code extensions list found"
+    elif ! command -v code &> /dev/null; then
+        echo "⚠️  VS Code CLI not found"
+    fi
+fi
+echo ""
+
+# Install Cursor Extensions
+CURSOR_DOTFILES_DIR="$DOTFILES_DIR/cursor/Library/Application Support/Cursor/User"
+if [ -f "$CURSOR_DOTFILES_DIR/extensions.txt" ] && command -v cursor &> /dev/null; then
+    echo "📦 Installing Cursor extensions..."
+
+    extension_count=$(wc -l < "$CURSOR_DOTFILES_DIR/extensions.txt" | tr -d ' ')
+    echo "Found $extension_count extensions to install"
+
+    while IFS= read -r extension; do
+        if [ -n "$extension" ]; then
+            echo "  Installing: $extension"
+            cursor --install-extension "$extension" --force 2>/dev/null || echo "  ⚠️  Failed to install $extension"
+        fi
+    done < "$CURSOR_DOTFILES_DIR/extensions.txt"
+
+    echo "✅ Cursor extensions installed"
+else
+    if [ ! -f "$CURSOR_DOTFILES_DIR/extensions.txt" ]; then
+        echo "⚠️  No Cursor extensions list found"
+    elif ! command -v cursor &> /dev/null; then
+        echo "⚠️  Cursor CLI not found"
+    fi
+fi
+echo ""
+
+
 
 echo "======================================"
 echo "✅ Import complete!"
