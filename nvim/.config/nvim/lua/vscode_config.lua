@@ -47,6 +47,9 @@ map("n", "<Space>wv", "workbench.action.splitEditor")
 map("n", "<Space>ws", "workbench.action.splitEditorDown")
 map("n", "<Space>wq", "workbench.action.closeActiveEditor")
 
+-- --- Tab Navigation ---
+map("n", "H", "workbench.action.previousEditor")
+map("n", "L", "workbench.action.nextEditor")
 
 -- Force Ctrl+h/j/k/l to navigate VS Code windows
 map("n", "<C-h>", "workbench.action.navigateLeft")
@@ -59,7 +62,6 @@ map("n", "<C-l>", "workbench.action.navigateRight")
 vim.keymap.set("n", "<Space>gg", function()
     -- 1. Launch the Task
     vscode.call("workbench.action.tasks.runTask", { args = { "Lazygit" } })
-)
 end, { noremap = true, silent = true })
 
 -- --- AI / Cursor ---
