@@ -115,5 +115,7 @@
     "key": "shift+f11",
     "command": "workbench.action.debug.stepOut",
     "when": "neovim.mode != insert && inDebugMode"
-  }
+  },
+  //  So alt+e works in fish terminal
+}
 ]

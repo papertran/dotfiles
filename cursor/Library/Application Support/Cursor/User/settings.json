@@ -97,11 +97,15 @@
   "workbench.editor.showTabs": "multiple",
   "workbench.editor.wrapTabs": true,
   "workbench.editor.labelFormat": "medium",
+  "workbench.externalBrowser": "default",
   "window.restoreWindows": "all",
   "telemetry.telemetryLevel": "off",
   "update.showReleaseNotes": false,
   "extensions.autoUpdate": true,
   "extensions.autoCheckUpdates": true,
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
   "eslint.alwaysShowStatus": false,
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.rules": null,
@@ -146,5 +150,10 @@
   "explorer.confirmDragAndDrop": false,
   "cursor.cpp.disabledLanguages": ["plaintext"],
   "terminal.integrated.defaultProfile.osx": "fish",
-  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.13"
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3.13",
+  "[python]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "cursorpyright.analysis.typeCheckingMode": "basic"
 }

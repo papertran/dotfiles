@@ -69,6 +69,11 @@ end, { noremap = true, silent = true })
 -- map("n", "<Space>ac", "aichat.newchat")
 -- map("v", "<Space>ae", "aichat.insertselectionintochat")
 
+-- --- Code Folding ---
+map("n", "zc", "editor.fold")
+map("n", "zo", "editor.unfold")
+map("n", "za", "editor.toggleFold")
+
 -- --- Refactoring (The 'g' keys) ---
 map("n", "gr", "editor.action.rename")
 map("n", "gd", "editor.action.revealDefinition")
